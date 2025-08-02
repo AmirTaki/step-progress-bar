@@ -77,3 +77,15 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
 }
+
+.btn:hover {
+    opacity: .9;
+}
+
+.btn:active{
+    transform: scale(.97);
+}
+
+.btn:disabled{
+    background-color: lightgray;
+}
