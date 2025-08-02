@@ -6,3 +6,15 @@ body {
     align-items: center;
     background-color: yellow;  
 }
+
+.container {
+    text-align: center;
+}
+
+.progress-container{
+    width: 500px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+}
