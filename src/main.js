@@ -20,3 +20,11 @@ prevEl.addEventListener("click", (e) => {
         currentChecked = 1;
     }
 })
+
+const updateStepProgess = () => {
+    stepsEl.forEach((step, index)=>{
+        if(index < currentChecked){
+            
+        }
+    })
+}
