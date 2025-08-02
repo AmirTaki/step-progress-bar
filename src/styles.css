@@ -30,3 +30,15 @@ body {
     top:50%;
     transform: translateY(-50%);
 }
+.progress-bar-front{
+    position: absolute;
+    height: 4px;
+    width: 0;
+    background-color: green;
+    border: none;
+    z-index: -1;
+    margin: 0;
+    top:50%;
+    transform: translateY(-50%);
+    transition: .4s linear width;
+}
