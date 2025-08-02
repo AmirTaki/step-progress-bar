@@ -2,7 +2,7 @@ const nextEl =  document.getElementById("next")
 const prevEl = document.getElementById("prev")
 const progressEl = document.querySelector(".progress-bar-front")
 const stepsEl = document.querySelectorAll('.step')
-
+const checkedNumber = document.querySelectorAll(".checked");
 let currentChecked = 1;
 
 nextEl.addEventListener("click", ()=> {
@@ -40,4 +40,4 @@ const updateStepProgess = () => {
     })
 }
 
-const checkedNumber = document.querySelectorAll(".checked");
+progressEl.computedStyleMap.width = ((checkedNumber.length - 1) / (stepsEl.length - 1)) * 100 + "%"
