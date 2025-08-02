@@ -10,7 +10,7 @@ nextEl.addEventListener("click", ()=> {
     if(currentChecked > stepsEl.length){
         currentChecked = stepsEl.length;
     }
-      
+    updateStepProgess()  
 })
 
 
@@ -19,6 +19,7 @@ prevEl.addEventListener("click", (e) => {
     if(currentChecked < 1) {
         currentChecked = 1;
     }
+    updateStepProgess()
 })
 
 const updateStepProgess = () => {
@@ -38,3 +39,5 @@ const updateStepProgess = () => {
         }
     })
 }
+
+const checkedNumber = document.querySelectorAll(".checked");
