@@ -50,5 +50,6 @@ else if(currentChecked === stepsEl.length){
     nextEl.disabled = true
 }
 else {
-    
+    nextEl.disabled = false;
+    prevEl.disabled = false
 }
