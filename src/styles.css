@@ -33,7 +33,7 @@ body {
 .progress-bar-front{
     position: absolute;
     height: 4px;
-    width: 0;
+    width: 0%;
     background-color: green;
     border: none;
     z-index: -1;

@@ -2,7 +2,6 @@ const nextEl =  document.getElementById("next")
 const prevEl = document.getElementById("prev")
 const progressEl = document.querySelector(".progress-bar-front")
 const stepsEl = document.querySelectorAll('.step')
-const checkedNumber = document.querySelectorAll(".checked");
 let currentChecked = 1;
 
 nextEl.addEventListener("click", ()=> {
@@ -23,29 +22,26 @@ prevEl.addEventListener("click", (e) => {
 })
 
 const updateStepProgess = () => {
-    check()
+
     stepsEl.forEach((step, index)=>{
         if(index < currentChecked){
             step.classList.add("checked")
             step.innerHTML = `
             <i class = "fas fa-check"></i>
             <small>${
-                index === 0 ? "start" : index === stepsEl.length - 1 ? "Final" : "Step " + index
+                index === 0 ? "Start" : index === stepsEl.length - 1 ? "Final" : "Step " + index
             }</small>`
         }
         else {
             step.classList.remove("checked");
             step.innerHTML = `
-            <i  class = "fas fa-times"></i>`
+            <i  class = "fas fa-times"></i>`;
         }
     })
-}
+    const checkedNumber = document.querySelectorAll(".checked");
 
-progressEl.style.width = ((checkedNumber.length - 1) / (stepsEl.length - 1)) * 100 + "%";
+    progressEl.style.width = ((checkedNumber.length - 1) / (stepsEl.length - 1)) * 100 + "%";
 
-
-
-const check = () => {
     if(currentChecked == 1){
         prevEl.disabled = true;
     }
@@ -57,4 +53,6 @@ const check = () => {
         prevEl.disabled = false;
     }
 }
-check()
+
+
+
