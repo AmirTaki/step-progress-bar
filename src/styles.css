@@ -89,3 +89,9 @@ body {
 .btn:disabled{
     background-color: lightgray;
 }
+
+@media (max-width : 500px) {
+    .progress-container{
+        width: 90vw;
+    }
+}
