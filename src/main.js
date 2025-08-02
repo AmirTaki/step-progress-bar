@@ -29,8 +29,12 @@ const updateStepProgess = () => {
             <i class = "fas fa-check"></i>
             <small>${
                 index === 0 ? "start" : index === stepsEl.length - 1 ? "Final" : "Step " + index
-            }
-            `
+            }</small>`
+        }
+        else {
+            step.classList.remove("checked");
+            step.innerHTML = `
+            <i  class = "fas fa-items"></i>`
         }
     })
 }
