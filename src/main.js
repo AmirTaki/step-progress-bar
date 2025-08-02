@@ -23,6 +23,7 @@ prevEl.addEventListener("click", (e) => {
 })
 
 const updateStepProgess = () => {
+    check()
     stepsEl.forEach((step, index)=>{
         if(index < currentChecked){
             step.classList.add("checked")
@@ -35,21 +36,25 @@ const updateStepProgess = () => {
         else {
             step.classList.remove("checked");
             step.innerHTML = `
-            <i  class = "fas fa-items"></i>`
+            <i  class = "fas fa-times"></i>`
         }
     })
 }
 
-progressEl.computedStyleMap.width = ((checkedNumber.length - 1) / (stepsEl.length - 1)) * 100 + "%"
+progressEl.style.width = ((checkedNumber.length - 1) / (stepsEl.length - 1)) * 100 + "%";
 
 
-if(currentChecked === 1){
-    prevEl.disabled = true;
+
+const check = () => {
+    if(currentChecked == 1){
+        prevEl.disabled = true;
+    }
+    else if(currentChecked === stepsEl.length){
+        nextEl.disabled = true
+    }
+    else {
+        nextEl.disabled = false;
+        prevEl.disabled = false;
+    }
 }
-else if(currentChecked === stepsEl.length){
-    nextEl.disabled = true
-}
-else {
-    nextEl.disabled = false;
-    prevEl.disabled = false
-}
+check()
