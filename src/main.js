@@ -24,7 +24,13 @@ prevEl.addEventListener("click", (e) => {
 const updateStepProgess = () => {
     stepsEl.forEach((step, index)=>{
         if(index < currentChecked){
-            
+            step.classList.add("checked")
+            step.innerHTML = `
+            <i class = "fas fa-check"></i>
+            <small>${
+                index === 0 ? "start" : index === stepsEl.length - 1 ? "Final" : "Step " + index
+            }
+            `
         }
     })
 }
