@@ -41,3 +41,14 @@ const updateStepProgess = () => {
 }
 
 progressEl.computedStyleMap.width = ((checkedNumber.length - 1) / (stepsEl.length - 1)) * 100 + "%"
+
+
+if(currentChecked === 1){
+    prevEl.disabled = true;
+}
+else if(currentChecked === stepsEl.length){
+    nextEl.disabled = true
+}
+else {
+    
+}
